@@ -97,7 +97,6 @@ function renderPrice() {
   pricelist[3].style.visibility = state.whiteSauce ? 'visible' : 'hidden'
   pricelist[4].style.visibility = state.glutenFreeCrust ? 'visible' : 'hidden'
   var prices = pricelist.map(p => p.style.visibility == 'visible' ? Number(p.innerHTML[1]) : 0)
-  console.log(pricelist, prices)
   var totalPrice = prices.reduce((acc,num)=>acc+num) + 10
   document.querySelector('.price strong').innerHTML = '$' + String(totalPrice)
 }
